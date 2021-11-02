@@ -10,8 +10,8 @@
         android:id="@+id/imghinh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="136dp"
-        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        android:layout_marginBottom="96dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/anh" />
@@ -41,7 +41,7 @@
         app:srcCompat="@drawable/skipback" />
 
     <ImageButton
-        android:id="@+id/play"
+        android:id="@+id/btnPlay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -56,9 +56,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/play"
-        app:layout_constraintStart_toEndOf="@+id/play"
-        app:layout_constraintTop_toTopOf="@+id/play"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPlay"
+        app:layout_constraintStart_toEndOf="@+id/btnPlay"
+        app:layout_constraintTop_toTopOf="@+id/btnPlay"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/skipforward" />
 
@@ -98,7 +98,7 @@
         android:layout_height="23dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="32dp"
-        android:text="TextView"
+        android:text="Cô Đơn Dành Cho Ai"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -107,19 +107,42 @@
         android:layout_width="138dp"
         android:layout_height="22dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text="Sơn Tùng ATM"
         app:layout_constraintEnd_toStartOf="@+id/imgnhac"
         app:layout_constraintHorizontal_bias="0.238"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtbaihat" />
 
-    <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="349dp"
-        android:layout_height="8dp"
-        android:layout_marginBottom="48dp"
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="369dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="56dp"
         app:layout_constraintBottom_toTopOf="@+id/random"
-        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteX="34dp" />
+
+    <TextView
+        android:id="@+id/txtStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="232dp"
+        android:layout_marginBottom="24dp"
+        android:text="00:00"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toStartOf="@+id/txtEnd"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="2:00"
+        app:layout_constraintBottom_toBottomOf="@+id/txtStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtStart"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
